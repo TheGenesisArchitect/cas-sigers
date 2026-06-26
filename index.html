@@ -154,6 +154,40 @@
   .press-list a:hover .po::after,.press-list a:focus-visible .po::after{opacity:1}
   .press-list .py{grid-column:2;font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;color:var(--taupe,#8d7f72);text-align:right;white-space:nowrap}
   .press-list .ph{grid-column:1/-1;font-size:.94rem;line-height:1.45;color:var(--ink-soft)}
+  .press-extra{display:none}
+  .press.expanded .press-extra{display:block}
+  .press-more{margin-top:18px;font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--sienna-text);background:none;border:0;border-bottom:1px solid currentColor;padding:5px 0;cursor:pointer;transition:color .25s var(--ease)}
+  .press-more:hover,.press-more:focus-visible{color:var(--sienna)}
+
+  /* SCREENING ROOM — dark video wall, on-site lightbox */
+  .screening{background:var(--midnight)}
+  .screening .slate{color:var(--sienna)}
+  .screening .section-head h2{color:var(--d-text)}
+  .screening .section-head p{color:var(--d-text-dim)}
+  .screen-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:900px){.screen-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.screen-grid{grid-template-columns:1fr}}
+  .screen{display:flex;flex-direction:column;text-align:left;padding:0;border:0;background:none;font:inherit;color:inherit;cursor:pointer}
+  .screen-thumb{position:relative;display:block;aspect-ratio:16/9;overflow:hidden;border-radius:9px;border:1px solid var(--d-line);background:#000}
+  .screen-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .45s var(--ease),opacity .35s var(--ease)}
+  .screen:hover .screen-thumb img,.screen:focus-visible .screen-thumb img{transform:scale(1.05);opacity:.82}
+  .screen-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
+  .screen-play span{width:60px;height:60px;border-radius:50%;background:rgba(233,116,81,.94);display:flex;align-items:center;justify-content:center;color:var(--midnight);font-size:1.15rem;padding-left:4px;box-shadow:0 10px 32px rgba(0,0,0,.45);transition:transform .3s var(--ease)}
+  .screen:hover .screen-play span,.screen:focus-visible .screen-play span{transform:scale(1.12)}
+  .screen-tag{position:absolute;top:11px;left:11px;font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--midnight);background:var(--sienna);padding:3px 8px;border-radius:3px}
+  .screen-meta{padding:14px 2px 0}
+  .screen-title{font-family:var(--display);font-size:1.14rem;line-height:1.15;color:var(--d-text);display:block;transition:color .25s var(--ease)}
+  .screen:hover .screen-title,.screen:focus-visible .screen-title{color:var(--sienna)}
+  .screen-meta .role{font-family:var(--body);font-size:.8rem;color:var(--d-text-dim);margin-top:5px;display:block}
+
+  /* LIGHTBOX */
+  .lightbox{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;background:rgba(15,16,26,.93);backdrop-filter:blur(8px);padding:24px}
+  .lightbox.open{display:flex}
+  .lightbox-frame{position:relative;width:min(1120px,100%);aspect-ratio:16/9}
+  .lightbox-inner,.lightbox-inner iframe{width:100%;height:100%}
+  .lightbox-inner iframe{border:0;border-radius:10px;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+  .lightbox-close{position:absolute;top:18px;right:22px;z-index:101;width:46px;height:46px;border-radius:50%;border:1px solid var(--d-line);background:rgba(27,29,46,.6);color:var(--d-text);font-size:1.05rem;cursor:pointer;transition:all .25s var(--ease)}
+  .lightbox-close:hover,.lightbox-close:focus-visible{border-color:var(--sienna);color:var(--sienna)}
 
   /* PORTRAIT FRAME — img drops in; falls back to monogram if file missing */
   .frame{position:relative;aspect-ratio:4/5;border:1px solid var(--line);background:linear-gradient(160deg,var(--rose),var(--ivory-2));overflow:hidden;border-radius:6px}
@@ -272,6 +306,7 @@
     <a href="#about">About</a>
     <a href="#craft">Craft</a>
     <a href="#films">Film &amp; TV</a>
+    <a href="#screening">Watch</a>
     <a href="#books">Books</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -364,7 +399,32 @@
                 <span class="ph">Co-founder of Atlanta's women-of-color "Reel Divas" initiative.</span>
               </a>
             </li>
+            <li class="press-extra">
+              <a href="https://heragenda.com/p/scheme-queens-director-black-women-in-entertainment/" target="_blank" rel="noopener">
+                <span class="po">Her Agenda</span><span class="py">2022</span>
+                <span class="ph">The <em>Scheme Queens</em> director on Black women in entertainment.</span>
+              </a>
+            </li>
+            <li class="press-extra">
+              <a href="https://eurweb.com/filming-has-wrapped-for-a-mothers-intuition-a-tv-one-original-film/" target="_blank" rel="noopener">
+                <span class="po">EURweb</span><span class="py">2023</span>
+                <span class="ph">Directing <em>A Mother's Intuition</em>, a TV One original film.</span>
+              </a>
+            </li>
+            <li class="press-extra">
+              <a href="https://blackgirlscreenwriters.com/cas-sigers-beedles-brings-unthinkably-good-things/" target="_blank" rel="noopener">
+                <span class="po">Black Girl Screenwriters</span><span class="py">2022</span>
+                <span class="ph">Bringing <em>Unthinkably Good Things</em> to Hallmark Mahogany.</span>
+              </a>
+            </li>
+            <li class="press-extra">
+              <a href="https://voyageatl.com/interview/life-work-with-cas-sigers-beedles-of-atlanta/" target="_blank" rel="noopener">
+                <span class="po">VoyageATL</span><span class="py">Interview</span>
+                <span class="ph">Life &amp; work with Cas Sigers-Beedles of Atlanta.</span>
+              </a>
+            </li>
           </ul>
+          <button class="press-more" type="button" aria-expanded="false">See more press</button>
         </div>
       </div>
       <div class="about-side reveal">
@@ -584,6 +644,85 @@
   </div>
 </section>
 
+<!-- SCREENING ROOM -->
+<section class="section screening" id="screening">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="slate">Screening Room</span>
+      <h2>Watch the work</h2>
+      <p>Full films and trailers, playing right here. Tap a title to watch.</p>
+    </div>
+    <div class="screen-grid">
+
+      <button class="screen reveal" type="button" data-yt="plecGJ69zUA" aria-label="Play Unthinkably Good Things">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/plecGJ69zUA/hqdefault.jpg" alt="Unthinkably Good Things still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">Unthinkably Good Things</span><span class="role">Screenwriter · 2022</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="GyRxf5KwhOA" aria-label="Play The Holiday Stocking">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/GyRxf5KwhOA/hqdefault.jpg" alt="The Holiday Stocking still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">The Holiday Stocking</span><span class="role">Screenwriter · 2022</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="p4U1W9jJt9Q" aria-label="Play The Legacy of Black Wall Street">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/p4U1W9jJt9Q/hqdefault.jpg" alt="The Legacy of Black Wall Street still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">The Legacy of Black Wall Street</span><span class="role">Writer · 2021</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="RLwdLZzIP24" aria-label="Play Sugar Plum Twist">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/RLwdLZzIP24/hqdefault.jpg" alt="Sugar Plum Twist still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">Sugar Plum Twist</span><span class="role">Screenwriter · 2021</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="l0aPx26BgrY" aria-label="Play Open">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/l0aPx26BgrY/hqdefault.jpg" alt="Open still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">Open</span><span class="role">Writer · Director · 2020</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="UyYob-hhtlY" aria-label="Play T'was the Chaos Before Christmas">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/UyYob-hhtlY/hqdefault.jpg" alt="T'was the Chaos Before Christmas still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">T'was the Chaos Before Christmas</span><span class="role">Screenwriter · 2019</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="PCh6JpeXPPc" aria-label="Play Hip Hop Holiday">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/PCh6JpeXPPc/hqdefault.jpg" alt="Hip Hop Holiday still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">Hip Hop Holiday</span><span class="role">Writer · Producer · 2019</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="D9M4kaer75s" aria-label="Play When Love Kills">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/D9M4kaer75s/hqdefault.jpg" alt="When Love Kills still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">When Love Kills</span><span class="role">Writer · 2017</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="tiXb-XhWBj0" aria-label="Play #DigitalLivesMatter">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/tiXb-XhWBj0/hqdefault.jpg" alt="#DigitalLivesMatter still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">#DigitalLivesMatter</span><span class="role">Writer · Exec Producer · 2016</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="RA6D7NoV6Bw" aria-label="Play Girlfriends' Getaway 2">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/RA6D7NoV6Bw/hqdefault.jpg" alt="Girlfriends' Getaway 2 still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">Girlfriends' Getaway 2</span><span class="role">Writer · Exec Producer · 2015</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="8AnWegX-sEs" aria-label="Play Girlfriends' Getaway">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/8AnWegX-sEs/hqdefault.jpg" alt="Girlfriends' Getaway still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span></span>
+        <span class="screen-meta"><span class="screen-title">Girlfriends' Getaway</span><span class="role">Writer · Exec Producer · 2014</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="g25qAl2tFac" aria-label="Play Love Will Keep Us Together">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/g25qAl2tFac/hqdefault.jpg" alt="Love Will Keep Us Together still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span><span class="screen-tag">Full film</span></span>
+        <span class="screen-meta"><span class="screen-title">Love Will Keep Us Together</span><span class="role">Writer · 2013</span></span>
+      </button>
+
+      <button class="screen reveal" type="button" data-yt="gqc5roRGZ5w" aria-label="Play Between Sisters">
+        <span class="screen-thumb"><img src="https://img.youtube.com/vi/gqc5roRGZ5w/hqdefault.jpg" alt="Between Sisters still" loading="lazy" decoding="async"><span class="screen-play"><span>&#9654;</span></span><span class="screen-tag">Full film</span></span>
+        <span class="screen-meta"><span class="screen-title">Between Sisters</span><span class="role">Writer · 2013</span></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
 <!-- BOOKS -->
 <section class="section alt" id="books">
   <div class="wrap">
@@ -657,6 +796,12 @@
   </div>
 </footer>
 </main>
+
+<!-- Lightbox player for the Screening Room -->
+<div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Video player">
+  <button class="lightbox-close" type="button" aria-label="Close video">&#10005;</button>
+  <div class="lightbox-frame"><div class="lightbox-inner" id="lightbox-inner"></div></div>
+</div>
 
 <script>
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -732,6 +877,39 @@
   }
 
   document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // See-more press toggle
+  var pressMore = document.querySelector('.press-more');
+  if(pressMore){
+    pressMore.addEventListener('click', function(){
+      var expanded = pressMore.closest('.press').classList.toggle('expanded');
+      pressMore.textContent = expanded ? 'See less' : 'See more press';
+      pressMore.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+    });
+  }
+
+  // Screening Room lightbox player
+  var lb = document.getElementById('lightbox');
+  var lbInner = document.getElementById('lightbox-inner');
+  function lbOpen(id){
+    lbInner.innerHTML = '<iframe src="https://www.youtube-nocookie.com/embed/' + id +
+      '?autoplay=1&rel=0" title="Video player" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>';
+    lb.classList.add('open'); lb.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+  }
+  function lbClose(){
+    lb.classList.remove('open'); lb.setAttribute('aria-hidden','true');
+    lbInner.innerHTML = ''; document.body.style.overflow = '';
+  }
+  document.querySelectorAll('.screen').forEach(function(btn){
+    btn.addEventListener('click', function(){ lbOpen(btn.getAttribute('data-yt')); });
+  });
+  if(lb){
+    lb.addEventListener('click', function(e){
+      if(e.target === lb || e.target.classList.contains('lightbox-close')) lbClose();
+    });
+    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')) lbClose(); });
+  }
 </script>
 </body>
 </html>
