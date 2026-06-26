@@ -212,8 +212,9 @@
   .poster.g-romance  .poster-fallback{--poster-bg:linear-gradient(155deg,#4d2230,#190b10)}
   .poster.g-crime    .poster-fallback{--poster-bg:linear-gradient(155deg,#2e2540,#100c18)}
   .poster.g-feelgood .poster-fallback{--poster-bg:linear-gradient(155deg,#553414,#1a1009)}
-  .film-badge{position:absolute;top:12px;left:12px;z-index:2;font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--midnight);background:var(--sienna);padding:4px 9px;border-radius:3px}
-  .film-tag{position:absolute;top:12px;right:12px;z-index:2;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sienna-bright);background:rgba(27,29,46,.78);border:1px solid var(--d-line);padding:4px 8px;border-radius:3px}
+  .film-foot{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding-top:12px;border-top:1px solid var(--line-soft)}
+  .film-year{font-family:var(--mono);font-size:.74rem;letter-spacing:.14em;color:var(--ink-soft)}
+  .film-tag{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--sienna-text);background:var(--sienna-soft);border:1px solid rgba(168,67,31,.22);padding:3px 9px;border-radius:999px;white-space:nowrap}
   .film-meta{padding:18px 18px 20px;display:flex;flex-direction:column;gap:6px}
   .film-meta h3{font-size:1.2rem;line-height:1.12;color:var(--ink)}
   .film-meta .role{font-family:var(--body);font-size:.82rem;color:var(--sienna-text);margin-top:4px}
@@ -468,126 +469,112 @@
         <div class="poster g-thriller">
           <img src="assets/films/raven-eye.jpg" alt="Raven's Eye key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Thriller</span><span class="pf-title">Raven's Eye</span></div>
-          <span class="film-badge">2026</span><span class="film-tag">Upcoming</span>
         </div>
-        <div class="film-meta"><h3>Raven's Eye</h3><span class="role">Writer · Director</span><span class="net">AMC+ · Thriller</span></div>
+        <div class="film-meta"><h3>Raven's Eye</h3><span class="role">Writer · Director</span><span class="net">AMC+ · Thriller</span><div class="film-foot"><span class="film-year">2026</span><span class="film-tag">Upcoming</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-heist">
           <img src="assets/films/caribbean-heist.jpg" alt="Caribbean Heist key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Heist</span><span class="pf-title">Caribbean Heist</span></div>
-          <span class="film-badge">2025</span><span class="film-tag">New</span>
         </div>
-        <div class="film-meta"><h3>Caribbean Heist</h3><span class="role">Writer · Director</span><span class="net">Scheme Queens 2 · Heist</span></div>
+        <div class="film-meta"><h3>Caribbean Heist</h3><span class="role">Writer · Director</span><span class="net">Scheme Queens 2 · Heist</span><div class="film-foot"><span class="film-year">2025</span><span class="film-tag">New</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-holiday">
           <img src="assets/films/a-soulful-christmas.jpg" alt="A Soulful Christmas key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Holiday</span><span class="pf-title">A Soulful Christmas</span></div>
-          <span class="film-badge">2025</span>
         </div>
-        <div class="film-meta"><h3>A Soulful Christmas</h3><span class="role">Writer · Director</span><span class="net">Holiday feature</span></div>
+        <div class="film-meta"><h3>A Soulful Christmas</h3><span class="role">Writer · Director</span><span class="net">Holiday feature</span><div class="film-foot"><span class="film-year">2025</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-drama">
           <img src="assets/films/aftershock.jpg" alt="Aftershock: The Nicole P. Bell Story key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">True story</span><span class="pf-title">Aftershock</span></div>
-          <span class="film-badge">2025</span>
         </div>
-        <div class="film-meta"><h3>Aftershock: The Nicole P. Bell Story</h3><span class="role">Screenwriter</span><span class="net">Biographical drama</span></div>
+        <div class="film-meta"><h3>Aftershock: The Nicole P. Bell Story</h3><span class="role">Screenwriter</span><span class="net">Biographical drama</span><div class="film-foot"><span class="film-year">2025</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-thriller">
           <img src="assets/films/the-match.jpg" alt="The Match key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Thriller</span><span class="pf-title">The Match</span></div>
-          <span class="film-badge">2024</span>
         </div>
-        <div class="film-meta"><h3>The Match</h3><span class="role">Writer · Director</span><span class="net">AMC+ · ALLBLK</span></div>
+        <div class="film-meta"><h3>The Match</h3><span class="role">Writer · Director</span><span class="net">AMC+ · ALLBLK</span><div class="film-foot"><span class="film-year">2024</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-heist">
           <img src="assets/films/scheme-queens.jpg" alt="Scheme Queens key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Heist</span><span class="pf-title">Scheme Queens</span></div>
-          <span class="film-badge">2022</span>
         </div>
-        <div class="film-meta"><h3>Scheme Queens</h3><span class="role">Writer · Director · Producer</span><span class="net">BET · Heist</span></div>
+        <div class="film-meta"><h3>Scheme Queens</h3><span class="role">Writer · Director · Producer</span><span class="net">BET · Heist</span><div class="film-foot"><span class="film-year">2022</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-romance">
           <img src="assets/films/unthinkably-good-things.jpg" alt="Unthinkably Good Things key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Romance</span><span class="pf-title">Unthinkably Good Things</span></div>
-          <span class="film-badge">2022</span><span class="film-tag">Gracie Award</span>
         </div>
-        <div class="film-meta"><h3>Unthinkably Good Things</h3><span class="role">Screenwriter</span><span class="net">Hallmark Mahogany</span></div>
+        <div class="film-meta"><h3>Unthinkably Good Things</h3><span class="role">Screenwriter</span><span class="net">Hallmark Mahogany</span><div class="film-foot"><span class="film-year">2022</span><span class="film-tag">Gracie Award</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-holiday">
           <img src="assets/films/the-holiday-stocking.jpg" alt="The Holiday Stocking key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Holiday</span><span class="pf-title">The Holiday Stocking</span></div>
-          <span class="film-badge">2022</span>
         </div>
-        <div class="film-meta"><h3>The Holiday Stocking</h3><span class="role">Screenwriter</span><span class="net">Hallmark Mahogany</span></div>
+        <div class="film-meta"><h3>The Holiday Stocking</h3><span class="role">Screenwriter</span><span class="net">Hallmark Mahogany</span><div class="film-foot"><span class="film-year">2022</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-suspense">
           <img src="assets/films/mediator.jpg" alt="Mediator key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Thriller</span><span class="pf-title">Mediator</span></div>
-          <span class="film-badge">2021</span>
         </div>
-        <div class="film-meta"><h3>Mediator</h3><span class="role">Director · Exec Producer</span><span class="net">Thriller</span></div>
+        <div class="film-meta"><h3>Mediator</h3><span class="role">Director · Exec Producer</span><span class="net">Thriller</span><div class="film-foot"><span class="film-year">2021</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-drama">
           <img src="assets/films/black-wall-street.jpg" alt="The Legacy of Black Wall Street key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Documentary</span><span class="pf-title">The Legacy of Black Wall Street</span></div>
-          <span class="film-badge">2021</span><span class="film-tag">OWN</span>
         </div>
-        <div class="film-meta"><h3>The Legacy of Black Wall Street</h3><span class="role">Writer</span><span class="net">OWN · Documentary</span></div>
+        <div class="film-meta"><h3>The Legacy of Black Wall Street</h3><span class="role">Writer</span><span class="net">OWN · Documentary</span><div class="film-foot"><span class="film-year">2021</span><span class="film-tag">OWN</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-drama">
           <img src="assets/films/open.jpg" alt="Open key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Drama</span><span class="pf-title">Open</span></div>
-          <span class="film-badge">2020</span><span class="film-tag">Dir. debut</span>
         </div>
-        <div class="film-meta"><h3>Open</h3><span class="role">Writer · Director · EP</span><span class="net">BET</span></div>
+        <div class="film-meta"><h3>Open</h3><span class="role">Writer · Director · EP</span><span class="net">BET</span><div class="film-foot"><span class="film-year">2020</span><span class="film-tag">Dir. debut</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-holiday">
           <img src="assets/films/twas-the-chaos-before-christmas.jpg" alt="T'was the Chaos Before Christmas key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Holiday</span><span class="pf-title">T'was the Chaos Before Christmas</span></div>
-          <span class="film-badge">2019</span><span class="film-tag">BET record</span>
         </div>
-        <div class="film-meta"><h3>T'was the Chaos Before Christmas</h3><span class="role">Screenwriter</span><span class="net">BET · NAACP nom</span></div>
+        <div class="film-meta"><h3>T'was the Chaos Before Christmas</h3><span class="role">Screenwriter</span><span class="net">BET · NAACP nom</span><div class="film-foot"><span class="film-year">2019</span><span class="film-tag">BET record</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-crime">
           <img src="assets/films/when-love-kills.jpg" alt="When Love Kills: The Falicia Blakely Story key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">True crime</span><span class="pf-title">When Love Kills</span></div>
-          <span class="film-badge">2017</span><span class="film-tag">2 NAACP noms</span>
         </div>
-        <div class="film-meta"><h3>When Love Kills: The Falicia Blakely Story</h3><span class="role">Writer</span><span class="net">TV One · Biopic</span></div>
+        <div class="film-meta"><h3>When Love Kills: The Falicia Blakely Story</h3><span class="role">Writer</span><span class="net">TV One · Biopic</span><div class="film-foot"><span class="film-year">2017</span><span class="film-tag">2 NAACP noms</span></div></div>
       </article>
 
       <article class="film reveal">
         <div class="poster g-feelgood">
           <img src="assets/films/to-love-and-to-cherish.jpg" alt="To Love and to Cherish key art" loading="lazy" decoding="async" width="600" height="900" onerror="this.closest('.poster').classList.add('noimg')" onload="this.style.opacity=1">
           <div class="poster-fallback" aria-hidden="true"><span class="pf-kicker">Family</span><span class="pf-title">To Love and to Cherish</span></div>
-          <span class="film-badge">2012</span>
         </div>
-        <div class="film-meta"><h3>To Love and to Cherish</h3><span class="role">Producer</span><span class="net">Uplifting · Family</span></div>
+        <div class="film-meta"><h3>To Love and to Cherish</h3><span class="role">Producer</span><span class="net">Uplifting · Family</span><div class="film-foot"><span class="film-year">2012</span></div></div>
       </article>
 
     </div>
